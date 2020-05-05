@@ -46,6 +46,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_extensions',
+    'versatileimagefield',
+    'rest_framework',
+
     'images',
     'api'
 ]

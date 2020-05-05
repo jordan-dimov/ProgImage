@@ -1,3 +1,7 @@
-from django.shortcuts import render
+from rest_framework import viewsets
 
-# Create your views here.
+from images.models import Image
+
+
+class ImageViewSet(viewsets.ModelViewSet):
+    queryset = Image.objects.all().order_by('-created')
