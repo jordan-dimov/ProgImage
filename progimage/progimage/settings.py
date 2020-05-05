@@ -154,3 +154,6 @@ DATETIME_INPUT_FORMATS = [
 
 STATIC_URL = '/static/'
 STATIC_ROOT = here("static")
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = here("media")

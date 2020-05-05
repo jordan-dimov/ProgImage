@@ -9,7 +9,7 @@ from versatileimagefield.fields import VersatileImageField
 class Image(TimeStampedModel):
     """
     The main model used for storing images.
-    Inherits the following fields from the django_extensions helpers:
+    Inherits the following fields from the django_extensions helper:
 
       created : DateTimeField
       modified : DateTimeField
@@ -18,10 +18,10 @@ class Image(TimeStampedModel):
 
     The `height` and `width` fields are auto populated based on the image data.
     """
-    uuid = ShortUUIDField()
+    uuid = ShortUUIDField(primary_key=True)
     raw_image = VersatileImageField(
         'Raw Image',
-        upload_to='images/',
+        upload_to='image_data/',
         width_field='width',
         height_field='height',
     )
